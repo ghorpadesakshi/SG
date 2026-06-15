@@ -1,0 +1,44 @@
+/* Desktop */
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #141428;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .navbar.active {
+        display: flex !important;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

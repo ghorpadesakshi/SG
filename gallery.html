@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#111;
+            color:white;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:20px;
+        }
+
+        .gallery img{
+            width:100%;
+            border-radius:10px;
+            transition:.3s;
+            cursor:pointer;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.03);
+        }
+
+        .back-btn{
+            display:inline-block;
+            margin-bottom:20px;
+            text-decoration:none;
+            color:white;
+            background:#007bff;
+            padding:10px 20px;
+            border-radius:5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<a href="projects.html" class="back-btn">← Back to Projects</a>
+
+<h1 id="title"></h1>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+
+const project = new URLSearchParams(window.location.search).get("project");
+
+const galleries = {
+
+    sams:[
+        "images/SAMS/1.png",
+        "images/SAMS/2.png",
+        "images/SAMS/3.png",
+        "images/SAMS/4.png",
+        "images/SAMS/5.png"
+    ],
+
+    ai:[
+        "images/AI/1.png",
+        "images/AI/2.png",
+        "images/AI/3.png",
+        "images/AI/4.png",
+        "images/AI/5.png"
+    ],
+
+    ccms:[
+        "images/CCMS/1.png",
+        "images/CCMS/2.png",
+        "images/CCMS/3.png",
+        "images/CCMS/4.png",
+        "images/CCMS/5.png"
+    ],
+
+    sop:[
+        "images/DOC/1.png",
+        "images/DOC/2.png",
+        "images/DOC/3.png",
+         "images/DOC/4.png"
+    ],
+
+    buddyboard:[
+        "images/BuddyBoard/1.png",
+        "images/BuddyBoard/2.png",
+        "images/BuddyBoard/3.png",
+         "images/BuddyBoard/3.png"
+    ],
+
+    riders:[
+        "images/Riders/1.png",
+        "images/Riders/2.png",
+        "images/Riders/3.png",
+        "images/Riders/4.png"
+    ],
+
+    marketing:[
+        "images/Marketing/1.png",
+        "images/Marketing/2.png",
+        "images/Marketing/3.png",
+         "images/Marketing/4.png",
+    ]
+};
+
+document.getElementById("title").innerText =
+project.toUpperCase() + " Screenshots";
+
+const gallery = document.getElementById("gallery");
+
+galleries[project].forEach(img => {
+
+    const image = document.createElement("img");
+
+    image.src = img;
+
+    gallery.appendChild(image);
+
+});
+
+</script>
+
+</body>
+</html>

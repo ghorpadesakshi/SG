@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+<style>
+    /* SKILLS SECTION */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+}
+
+/* SKILL CARD */
+
+.skill-card{
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* GLOW EFFECT */
+
+.skill-card::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:rgba(255,78,205,0.2);
+
+    border-radius:50%;
+
+    top:-40px;
+    right:-40px;
+
+    filter:blur(35px);
+}
+
+/* HOVER */
+
+.skill-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    border:1px solid #ff4ecd;
+
+    box-shadow:
+    0 0 25px rgba(255,78,205,0.3);
+}
+
+/* ICON */
+
+.skill-card i{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+    transition:0.4s;
+}
+
+.skill-card:hover i{
+
+    transform:scale(1.15);
+}
+
+/* TEXT */
+
+.skill-card h2{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:white;
+}
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/nav.css">
+
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- DEVICON -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        Sakshi.
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        
+    </nav>
+
+    <div class="menu-icon" id="menu-icon">
+        <i class='bx bx-menu'></i>
+    </div>
+
+</header>
+
+<section class="page-section">
+
+    <h1>My Skills</h1>
+
+    <div class="skills-grid">
+
+        <!-- HTML -->
+
+        <div class="skill-card">
+
+            <i class="devicon-html5-plain colored"></i>
+
+            <h2>HTML</h2>
+
+        </div>
+
+        <!-- CSS -->
+
+        <div class="skill-card">
+
+            <i class="devicon-css3-plain colored"></i>
+
+            <h2>CSS</h2>
+
+        </div>
+
+        <!-- JAVASCRIPT -->
+
+        <div class="skill-card">
+
+            <i class="devicon-javascript-plain colored"></i>
+
+            <h2>JavaScript</h2>
+
+        </div>
+
+        <!-- JAVA -->
+
+        <div class="skill-card">
+
+            <i class="devicon-java-plain colored"></i>
+
+            <h2>Java</h2>
+
+        </div>
+
+        <!-- PYTHON -->
+
+        <div class="skill-card">
+
+            <i class="devicon-python-plain colored"></i>
+
+            <h2>Python</h2>
+
+        </div>
+
+        <!-- SPRING BOOT -->
+
+        <div class="skill-card">
+
+            <i class="devicon-spring-plain colored"></i>
+
+            <h2>Spring Boot</h2>
+
+        </div>
+
+        <!-- HIBERNATE -->
+
+        <div class="skill-card">
+
+            <i class='bx bx-data'></i>
+
+            <h2>Hibernate</h2>
+
+        </div>
+
+        <!-- AWS -->
+
+      
+
+        <!-- MYSQL -->
+
+        <div class="skill-card">
+
+            <i class="devicon-mysql-plain colored"></i>
+
+            <h2>MySQL</h2>
+
+        </div>
+
+        <!-- MACHINE LEARNING -->
+
+        <div class="skill-card">
+
+            <i class='bx bx-brain'></i>
+
+            <h2>Machine Learning</h2>
+
+        </div>
+
+        <!-- GITHUB -->
+
+        <div class="skill-card">
+
+            <i class="devicon-github-original"></i>
+
+            <h2>GitHub</h2>
+
+        </div>
+
+        <!-- IOT -->
+
+        <div class="skill-card">
+
+            <i class='bx bx-chip'></i>
+
+            <h2>IoT</h2>
+
+        </div>
+
+    </div>
+
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.getElementById("navbar");
+
+    menuIcon.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+</script>
+</body>
+</html>

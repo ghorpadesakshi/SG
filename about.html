@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>About | Sakshi</title>
+    <style>
+        /* MODERN ABOUT PAGE */
+
+.modern-about{
+
+    padding:140px 8%;
+}
+
+/* TOP SECTION */
+
+.about-top{
+
+    text-align:center;
+
+    max-width:950px;
+
+    margin:auto;
+}
+
+.about-tag{
+
+    color:#ff4ecd;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+.about-top h1{
+
+    font-size:65px;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
+    background:linear-gradient(
+        to right,
+        #ff4ecd,
+        #8f94fb
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.about-description{
+
+    color:#d6d6d6;
+
+    font-size:18px;
+
+    line-height:1.9;
+}
+
+/* ABOUT CARDS */
+
+.about-cards{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+}
+
+.about-card{
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    transition:0.4s;
+}
+
+.about-card:hover{
+
+    transform:translateY(-12px);
+
+    border:1px solid #ff4ecd;
+
+    box-shadow:
+    0 0 25px rgba(255,78,205,0.3);
+}
+
+/* ICON */
+
+.about-card i{
+
+    font-size:60px;
+
+    color:#ff4ecd;
+
+    margin-bottom:25px;
+}
+
+/* HEADING */
+
+.about-card h2{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+
+/* TEXT */
+
+.about-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+}
+
+/* JOURNEY SECTION */
+
+/* JOURNEY SECTION */
+
+.journey-section{
+
+    margin-top:120px;
+
+    position:relative;
+}
+
+/* TITLE */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:80px;
+}
+
+.section-title p{
+
+    color:#ff4ecd;
+
+    letter-spacing:4px;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.section-title h2{
+
+    font-size:55px;
+
+    background:linear-gradient(
+        to right,
+        #ff4ecd,
+        #8f94fb
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+/* TIMELINE */
+
+.timeline{
+
+    position:relative;
+
+    max-width:1100px;
+
+    margin:auto;
+}
+
+/* CENTER LINE */
+
+.timeline::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:4px;
+
+    height:100%;
+
+    background:linear-gradient(
+        to bottom,
+        #ff4ecd,
+        #8f94fb
+    );
+
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+/* ITEM */
+
+.timeline-item{
+
+    width:50%;
+
+    padding:20px 40px;
+
+    position:relative;
+}
+
+/* LEFT SIDE */
+
+.timeline-item:nth-child(odd){
+
+    left:0;
+
+    text-align:right;
+}
+
+/* RIGHT SIDE */
+
+.timeline-item:nth-child(even){
+
+    left:50%;
+}
+
+/* DOT */
+
+.timeline-dot{
+
+    width:22px;
+
+    height:22px;
+
+    background:#ff4ecd;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:40px;
+
+    right:-11px;
+
+    box-shadow:
+    0 0 20px rgba(255,78,205,0.8);
+}
+
+/* RIGHT SIDE DOT */
+
+.timeline-item:nth-child(even) .timeline-dot{
+
+    left:-11px;
+}
+
+/* CONTENT */
+
+.timeline-content{
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    transition:0.4s;
+}
+
+/* HOVER */
+
+.timeline-content:hover{
+
+    transform:translateY(-10px);
+
+    border:1px solid #ff4ecd;
+
+    box-shadow:
+    0 0 25px rgba(255,78,205,0.3);
+}
+
+/* YEAR */
+
+.timeline-year{
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        45deg,
+        #ff4ecd,
+        #8f94fb
+    );
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+/* HEADING */
+
+.timeline-content h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    color:white;
+}
+
+/* TEXT */
+
+.timeline-content p{
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .timeline::before{
+
+        left:20px;
+    }
+
+    .timeline-item{
+
+        width:100%;
+
+        padding-left:70px;
+
+        padding-right:20px;
+
+        text-align:left !important;
+
+        left:0 !important;
+    }
+
+    .timeline-dot{
+
+        left:9px !important;
+    }
+
+    .section-title h2{
+
+        font-size:40px;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .about-top h1{
+
+        font-size:45px;
+    }
+
+    .journey-item{
+
+        flex-direction:column;
+    }
+}
+        </style>
+
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/nav.css">
+
+
+    <!-- BOXICONS -->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+    rel='stylesheet'>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo">
+        Sakshi.
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        
+    </nav>
+
+    <div class="menu-icon" id="menu-icon">
+        <i class='bx bx-menu'></i>
+    </div>
+
+</header>
+
+<!-- ABOUT SECTION -->
+
+<section class="modern-about">
+
+    <!-- TOP TITLE -->
+
+    <div class="about-top">
+
+        <p class="about-tag">
+            ABOUT ME
+        </p>
+
+        <h1>
+            Passionate Developer <br>
+            Creating Smart & Modern Solutions
+        </h1>
+
+        <p class="about-description">
+
+            I am a Computer Engineering student passionate about
+            Full Stack Development, IoT, Cloud Computing,
+            and Machine Learning.
+
+            I enjoy building modern digital solutions,
+            exploring emerging technologies,
+            and continuously improving my technical skills
+            through real-world projects and hands-on learning.
+
+        </p>
+
+    </div>
+
+    <!-- ABOUT CARDS -->
+
+    <div class="about-cards">
+
+        <!-- CARD 1 -->
+
+        <div class="about-card">
+
+            <i class='bx bx-code-alt'></i>
+
+            <h2>
+                Full Stack Development
+            </h2>
+
+            <p>
+
+                Building responsive and user-friendly
+                web applications using HTML, CSS,
+                JavaScript, Java, Spring Boot,
+                Hibernate, and MySQL.
+
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="about-card">
+
+            <i class='bx bx-chip'></i>
+
+            <h2>
+                IoT & Innovation
+            </h2>
+
+            <p>
+
+                Developed innovative IoT projects
+                like Riders Shield and Smart Parking System
+                focused on safety and smart automation.
+
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="about-card">
+
+            <i class='bx bxl-aws'></i>
+
+            <h2>
+                AWS & Cloud
+            </h2>
+
+            <p>
+
+                Explored AWS services like
+                EC2, S3, IAM, Load Balancer,
+                and Auto Scaling during internship training.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TIMELINE STYLE SECTION -->
+
+    <!-- JOURNEY SECTION -->
+
+<div class="journey-section">
+
+    <div class="section-title">
+
+        <p>MY JOURNEY</p>
+
+        <h2>
+            My Learning & Growth Timeline
+        </h2>
+
+    </div>
+
+    <div class="timeline">
+
+        <!-- TIMELINE ITEM 1 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-year">
+                    2022
+                </span>
+
+                <h3>
+                    Started B.Tech in Computer Engineering
+                </h3>
+
+                <p>
+
+                    Began my journey in Computer Engineering
+                    and developed strong interest in programming,
+                    web development, and emerging technologies.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TIMELINE ITEM 2 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-year">
+                    2023
+                </span>
+
+                <h3>
+                    Learned Full Stack Development
+                </h3>
+
+                <p>
+
+                    Explored frontend and backend technologies
+                    including HTML, CSS, JavaScript, Java,
+                    Spring Boot, Hibernate, and MySQL.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TIMELINE ITEM 3 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-year">
+                    2024
+                </span>
+
+                <h3>
+                    Developed Major Technical Projects
+                </h3>
+
+                <p>
+
+                    Built innovative projects like
+                    Riders Shield IoT System,
+                    Employee Management System,
+                    Smart Parking System,
+                    and Code Optimization Tool.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- TIMELINE ITEM 4 -->
+
+     <div class="timeline-item">
+
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-content">
+
+        <span class="timeline-year">
+            2025 - 2026
+        </span>
+
+        <h3>
+            Professional Internship Experience
+        </h3>
+
+        <p>
+
+            Successfully completed internships through
+            <strong>Infosys Springboard</strong> and
+            <strong>Infotact Solutions</strong>, gaining practical
+            experience in software development, cloud computing,
+            full-stack development, AWS services, problem-solving,
+            and industry-oriented technologies.
+
+            During these internships, I worked with technologies
+            such as AWS, Java, Python, RAG-based applications,
+            Redis, Load Balancing, Auto Scaling, and modern
+            web development practices while strengthening my
+            technical and professional skills.
+
+        </p>
+
+    </div>
+
+</div>
+
+        <!-- TIMELINE ITEM 5 -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-year">
+                    Future Goal
+                </span>
+
+                <h3>
+                    Aspiring Software Engineer
+                </h3>
+
+                <p>
+
+                    Continuously improving my technical,
+                    problem-solving, and development skills
+                    to contribute to impactful
+                    and innovative software solutions.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.getElementById("navbar");
+
+    menuIcon.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+</script>
+</body>
+
+</html>
